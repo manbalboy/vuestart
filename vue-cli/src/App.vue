@@ -1,7 +1,7 @@
 <template>
     <div>
         <p>{{str}}</p>
-        <app-header></app-header>
+        <app-header v-bind:propsData="str"></app-header>
     </div>
 </template>
 
@@ -11,7 +11,7 @@ import AppHeader from './components/AppHeader.vue';
 export default {
     data : function (){
         return {
-            str : 'hi'
+            str : 'data Str'
         }
     },
 
