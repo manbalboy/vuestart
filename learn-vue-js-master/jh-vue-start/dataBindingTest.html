@@ -13,18 +13,35 @@
         <p>{{num}}</p>
         <p>{{nDoubleNum}}</p>
 
+
+        <!-- if else 돔을 완전 제거 -->
+        <div v-if='loading'>
+            <p>Loading</p>
+        </div>
+        <div v-else>
+            <p>test user has been logged in</p>
+        </div>
+
+        <!-- show 는 display를 none -->
+        <div v-show="loading">
+            Loading show 
+        </div>
+    
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
 
         
         const vm = new Vue ({
             el : "#app",
+
             data :  {
                 sStr : "hi",
                 num : 10 ,
                 uuid : 'abc1234',
-                name : 'text-blue'
+                name : 'text-blue',
+                loading : true
             },
 
             computed : {
