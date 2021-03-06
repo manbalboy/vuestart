@@ -18,6 +18,7 @@
       template: '<div>header</div>',
       props: ['propsdata']
     }
+
     var appContent = {
       template: '<div>content<button v-on:click="passNum">pass</button></div>',
       methods: {
@@ -37,6 +38,7 @@
         num: 0
       },
       methods: {
+        
         deliverNum: function(value) {
           this.num = value;
         }
