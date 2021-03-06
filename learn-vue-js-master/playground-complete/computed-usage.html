@@ -13,7 +13,8 @@
 </head>
 <body>
   <div id="app">
-    <p v-bind:class="errorTextColor">Hello</p>
+    <!-- <p v-bind:class="errorTextColor">Hello</p> -->
+    <p v-bind:class="{ warning  : isError}">Hello</p>
   </div>
   
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
